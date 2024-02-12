@@ -14,8 +14,8 @@ public class SIAKAD22 {
         String nilaiHuruf[] = new String[9];
         double nilai[] = new double[9];
         double bobotNilai[] = new double[9];
-        double totalSKS = 18;
-        double nilaiSetara [] =  new double[9];
+        int sks;
+        int totalSks = 0;
         double totalbobot = 0;
 
 
@@ -44,15 +44,13 @@ public class SIAKAD22 {
                 nilaiHuruf[i] = "E";
                 bobotNilai[i] = 0;
             }
-            totalbobot += bobotNilai[i];
-            //nilaiSetara [i] = nilai [i] * bobotNilai [i];
+            System.out.print("SKS: ");
+            sks = sc.nextInt();
+            totalbobot += bobotNilai[i] * sks;
+            totalSks += sks;
+            
         }
-        // double totalNilaiSetara = 0;
-        // for (int i = 0; i < 9 ; i++){
-        //     totalNilaiSetara += nilaiSetara[i];
-        // }
-        //double ipSemester = totalNilaiSetara / totalSKS;
-        double ipSemester = totalbobot / 9;
+        double ipSemester = totalbobot / totalSks;
         System.out.println("====================================");
         System.out.println("     HASIL KONVERSI NILAI      ");
         System.out.println("====================================");
