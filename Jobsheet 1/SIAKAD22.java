@@ -60,7 +60,7 @@ public class SIAKAD22 {
             System.out.printf("%-62s%-22.2f%-22s%-11.2f\n", matkul[i], nilai[i], nilaiHuruf[i], bobotNilai[i]);
         }
         System.out.println("====================================");
-        System.out.printf("     IP Semeter = %.2f     ", ipSemester);
+        System.out.printf("     IP Semester = %.2f     ", ipSemester);
         System.out.println();
         System.out.println("====================================");
 
