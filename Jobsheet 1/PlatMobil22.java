@@ -36,5 +36,6 @@ public class PlatMobil22 {
                 System.out.println();
             }
         }while (sudah);
+        sc.close();
     }
 }

@@ -64,6 +64,6 @@ public class SIAKAD22 {
         System.out.println();
         System.out.println("====================================");
 
-
+        sc.close();
     }
 }

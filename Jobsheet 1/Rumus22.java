@@ -15,6 +15,7 @@ public class Rumus22 {
                 rumusWaktu();
             }
         }while (pilihan < 4);
+        sc.close();
     }
     static void rumusKecepatan(){
         Scanner sc = new Scanner(System.in);
@@ -25,6 +26,7 @@ public class Rumus22 {
         float kecepatan = jarak / waktu;
         System.out.printf("Kecepatan = %.2f m/s" , kecepatan );
         System.out.println();
+        sc.close();
     }
     static void rumusJarak (){
         Scanner sc = new Scanner(System.in);
@@ -35,6 +37,7 @@ public class Rumus22 {
         float jarak = kecepatan * waktu;
         System.out.printf("Jarak = %.2f m" , jarak  );
         System.out.println();
+        sc.close();
     }
     static void rumusWaktu (){
         Scanner sc = new Scanner(System.in);
@@ -45,5 +48,6 @@ public class Rumus22 {
         float waktu = jarak / Kecepatan;
         System.out.printf("Waktu = %.2f s" , waktu );
         System.out.println();
+        sc.close();
     }
 }
