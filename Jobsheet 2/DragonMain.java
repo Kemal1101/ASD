@@ -8,7 +8,7 @@ public class DragonMain {
         dragon1.move(4);
         dragon1.printStatus();
 
-        System.out.println("Dragon 2\n--------------");
+        System.out.println("--------------\nDragon 2");
         Dragon dragon2 = new Dragon();
         dragon2.x = 3;
         dragon2.y = 6;
