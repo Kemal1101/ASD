@@ -15,5 +15,6 @@ public class PelangganMain {
         pelanggan.nomorTelfon = sc.nextLine();
 
         pelanggan.tampilInfo();
+        sc.close();
     }
 }

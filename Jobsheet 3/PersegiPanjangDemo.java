@@ -22,5 +22,6 @@ public class PersegiPanjangDemo {
             arrayOfPersegiPanjang[i].cetakInfo(i);
             System.out.println("------------------------------------------");
         }
+        sc.close();
     }
 }

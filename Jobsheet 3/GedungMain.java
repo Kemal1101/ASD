@@ -21,5 +21,7 @@ public class GedungMain {
         for (int i = 0; i < jumlahGedung ; i++){
             gedung[i].info();
         }
+        sc.close();
     }
 }
+

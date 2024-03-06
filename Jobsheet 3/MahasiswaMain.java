@@ -8,24 +8,24 @@ public class MahasiswaMain {
         int jumlahMahasiswa = sc.nextInt();
         sc.nextLine();
 
-        Mahasiswa [] mahasiswa = new Mahasiswa[jumlahMahasiswa];
-        for (int i = 0; i < mahasiswa.length ; i++){
+        Mahasiswa [] daftarmahasiswa = new Mahasiswa[jumlahMahasiswa];
+        for (int i = 0; i < daftarmahasiswa.length ; i++){
             System.out.println("Mahasiswa ke-" + (i+1));
-            mahasiswa [i] = new Mahasiswa();
+            daftarmahasiswa [i] = new Mahasiswa();
             System.out.print("Masukkan nama mahasiswa: ");
-            mahasiswa[i].nama = sc.nextLine();
+            daftarmahasiswa[i].nama = sc.nextLine();
             System.out.print("Masukkan NIM mahasiswa: ");
-            mahasiswa[i].NIM = sc.nextLine();
+            daftarmahasiswa[i].NIM = sc.nextLine();
             System.out.print("Masukkan jenis kelamin mahasiswa: ");
-            mahasiswa[i].jenisKelamin = sc.nextLine();
+            daftarmahasiswa[i].jenisKelamin = sc.nextLine();
             System.out.print("Masukkan IPK mahasiswa: ");
-            mahasiswa[i].ipk = sc.nextDouble();
+            daftarmahasiswa[i].ipk = sc.nextDouble();
             sc.nextLine();
-            totalIpk += mahasiswa[i].ipk;
+            totalIpk += daftarmahasiswa[i].ipk;
         }
 
-        for (Mahasiswa Tampil : mahasiswa){
-            Tampil.tampil(j);
+        for (Mahasiswa mahasiswa : daftarmahasiswa){
+            mahasiswa.tampil(j);
             j++;
         }
 
@@ -35,5 +35,6 @@ public class MahasiswaMain {
         System.out.println();
         System.out.println("------------------------");
 
+        sc.close();
     }
 }
