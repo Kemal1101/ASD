@@ -93,4 +93,29 @@ public class Queue {
         return temp;
     }
 
+    public void sequentialSearch(String searchNama){
+        int indeks = front;
+        int antrian = 1;
+        if (isEmpty()){
+            System.out.println("Queue Kosong");
+        }else{
+            boolean found = false;
+            while (!found){
+                if (data[indeks].nama.equalsIgnoreCase(searchNama)){
+                    System.out.println(data[indeks]);
+                    System.out.println("Ada pada antrian ke-" + antrian);
+                    System.out.println("-----------------");
+                    found = true;
+                }else if (indeks == max - 1){
+                    indeks = 0;
+                }else if (indeks == rear && !(data[indeks].nama.equalsIgnoreCase(searchNama))){
+                    System.out.println("!!!Data Tidak Ditemukan!!!");
+                    found = true;
+                }else{
+                    indeks++;
+                    antrian++;
+                }
+            }
+        }
+    }
 }

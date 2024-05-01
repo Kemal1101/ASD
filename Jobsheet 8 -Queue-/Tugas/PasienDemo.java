@@ -9,7 +9,8 @@ public class PasienDemo {
         Queue myQueue = new Queue(kapasitas);
         do{
             System.out.println("Masukkan operasi yang diinginkan");
-            System.out.println("1. Enqueue Pasien\n2. Dequeue Pasien\n3. Print\n4. Cek antrian paling depan\n5. Cek antrian paling belakang\n6. Clear\n7. Exit\n----------------------------");
+            System.out.println("1. Enqueue Pasien\n2. Dequeue Pasien\n3. Print\n4. Cek antrian paling depan\n5. Cek antrian paling belakang\n6. Clear\n7. Search antrian berdasarkan nama"+
+            "\n8. Exit\n----------------------------");
             menu = sc.nextInt();
 
             switch (menu) {
@@ -43,9 +44,14 @@ public class PasienDemo {
                 case 5:
                     myQueue.peekRear();
                     break;
+                case 7:
+                    System.out.println("Masukkan nama yang akan di cari: ");
+                    sc.nextLine();
+                    String namaSearch = sc.nextLine();
+                    myQueue.sequentialSearch(namaSearch);
                     
             }
-        }while (menu >= 1 && menu <= 6);
+        }while (menu >= 1 && menu <= 7);
         sc.close();
     }
 }
