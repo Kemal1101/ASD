@@ -14,7 +14,7 @@ public class Stack{
     }
 
     public boolean isFull (){
-        return (top == size -1);
+        return (top == size - 1);
     }
 
     public void push (String dt){
@@ -38,6 +38,7 @@ public class Stack{
 
     public String peek(){
         if (!isEmpty()){
+            System.out.println(data[top]);
             return data[top];
         }else{
             System.out.println("Stack kosong");

@@ -6,10 +6,7 @@ public class StackDemo {
         myStack.push("Algoritma dan Struktur Data");
         myStack.push("Matematika");
 
-        System.out.println(myStack.pop());
-        System.out.println(myStack.pop());
-        System.out.println(myStack.pop());
-        System.out.println(myStack.pop());
+        myStack.print();
 
         
     }

@@ -40,7 +40,6 @@ public class Stack{
         if (!isEmpty()){
             return data[top];
         }else{
-            System.out.println("Stack kosong");
             return '\0';
         }
     }

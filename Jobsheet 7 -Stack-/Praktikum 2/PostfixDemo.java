@@ -1,11 +1,14 @@
 public class PostfixDemo {
 
     public static boolean isOperand(char c){
-        return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == ' ' || c == '.');
+        return ((c >= 'A' && c <= 'Z') ||
+         (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || 
+         c == ' ' || c == '.');
     }
 
     public static boolean isOperator (char c){
-        return (c == '^' || c == '%' || c == '/' || c == '*' || c ==  '-' || c == '+');
+        return (c == '^' || c == '%' || c == '/' || c == '*' || 
+        c ==  '-' || c == '+');
     }
 
     public static int getDerajat (char c){
@@ -60,9 +63,45 @@ public class PostfixDemo {
         return postfix;
     }
 
+    public static int hasil(String postfix){
+        int [] stackAngka = new int[postfix.length()];
+        int top = - 1;
+        
+        for (int i = 0; i < postfix.length() ; i++){
+            char c = postfix.charAt(i);
+
+            if (Character.isDigit(c)){
+                top++;
+                stackAngka[top] = c - '0';
+            }else {
+                int operand2 = stackAngka [top--];
+                int operand1 = stackAngka[top--];
+
+                switch (c) {
+                    case '+':
+                        stackAngka[++top] = operand1 + operand2;
+                        break;
+                    case '-':
+                        stackAngka[++top] = operand1 - operand2;
+                        break;
+                    case '*':
+                        stackAngka[++top] = operand1 * operand2;
+                        break;
+                    case '/':
+                        stackAngka[++top] = operand1 / operand2;
+                        break;
+                }
+            }
+        }
+        return stackAngka[top];
+    }
+
     public static void main(String[] args) {
-        String infix = "5*4^(1+2%3)";
+        String infix = "5*4+3";
         System.out.println("Infix: " + infix);
-        System.out.println("Postfix: " + konversi(infix));
+        String postfix = konversi(infix);
+        System.out.println("Postfix: " + postfix);
+        int hasilnya = hasil(postfix);
+        System.out.println(hasilnya);
     }
 }
