@@ -12,17 +12,17 @@ public class BinaryTreeMain {
         bt.add(10);
         bt.add(15);
 
-        // bt.traversePreOrder(bt.root);
-        // System.out.println();
-        // bt.traverseInOrder(bt.root);
-        // System.out.println();
-        // bt.traversePostOrder(bt.root);
-        // System.out.println();
-        // System.out.println("Find " + bt.find(5));
-        // System.out.println();
+        bt.traversePreOrder(bt.root);
+        System.out.println();
+        bt.traverseInOrder(bt.root);
+        System.out.println();
+        bt.traversePostOrder(bt.root);
+        System.out.println();
+        System.out.println("Find " + bt.find(5));
+        System.out.println();
         bt.delete(8);
-        // bt.traversePreOrder(bt.root);
-        // System.out.println();
+        bt.traversePreOrder(bt.root);
+        System.out.println();
 
         System.out.print("Data Leaf: ");
         bt.printLeaf(bt.root);
