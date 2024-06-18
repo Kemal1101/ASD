@@ -26,7 +26,7 @@ public class City {
                 return i;
             }
         }
-        return -1;
+        return - 1;
     }
 
     public void printGraph() {

@@ -29,7 +29,7 @@ public class CityMain {
             String kota1 = scanner.nextLine();
             System.out.print("Kota 2: ");
             String kota2 = scanner.nextLine();
-            System.out.print("Jarak " + kota1 + " – " + kota2 + ": ");
+            System.out.print("Jarak " + kota1 + " - " + kota2 + ": ");
             int jarak = scanner.nextInt();
             scanner.nextLine();
 
